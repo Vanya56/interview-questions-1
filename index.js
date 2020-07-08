@@ -20,11 +20,31 @@ function reverse(str) {
 
 ///////////////////////////////////
 
-function capitolize(str){
-    return str.toLowerCase().split(' ').map(function(word){
-        return word[0].toUpperCase()+word.substring(1);
-    })
-    .join(' ');
+function capitolize(str) {
+    return str.toLowerCase().split(' ').map(function (word) {
+            return word[0].toUpperCase() + word.substring(1);
+        })
+        .join(' ');
 }
-const output = capitolize('racecar driver');
-console.log(output);
+
+////////////////////////////////
+
+function fizzBuzz() {
+    for (let i = 1; i <= 100; i++) {
+        if (i % 15 === 0) {
+            console.log('FizzBuzz');
+        } else if (i % 3 === 0) {
+            console.log('Fizz');
+
+        } else if (i % 5 === 0) {
+            console.log('Buzz');
+
+        } else {
+            console.log(i);
+
+        }
+
+    }
+}
+const answer = fizzBuzz();
+console.log(answer);
