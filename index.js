@@ -19,5 +19,12 @@ function reverse(str) {
 }
 
 ///////////////////////////////////
-const output = palindromeChecker('racecar');
+
+function capitolize(str){
+    return str.toLowerCase().split(' ').map(function(word){
+        return word[0].toUpperCase()+word.substring(1);
+    })
+    .join(' ');
+}
+const output = capitolize('racecar driver');
 console.log(output);
