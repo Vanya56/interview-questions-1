@@ -46,5 +46,22 @@ function fizzBuzz() {
 
     }
 }
-const answer = fizzBuzz();
+
+//////////////////////////////////
+
+let messyArray = [[3, 6, 5, 8,[1,[12]]],9];
+
+function flatten(items){
+    const newArray = [];
+    items.forEach(item => {
+        if(Array.isArray(item)){
+            newArray.push(...flatten(item));
+        }else{
+            newArray.push(item)
+        }
+    });
+    return newArray;
+}
+
+const answer = flatten(messyArray);
 console.log(answer);
