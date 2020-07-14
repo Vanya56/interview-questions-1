@@ -1,21 +1,17 @@
 function palindromeChecker(word) {
     let palindrome = word.split('').reverse().join('')
     return palindrome === word;
-    // if (word == palindrome) {
-    //     return true;
-    // } else {
-    //     return false;
-    // }
+   
 }
 ////////////////////////////////
 
 function reverse(str) {
-    // return str.split('').reverse().join('');
-    let reverseString = '';
-    for (let char of str) {
-        reverseString = char + reverseString;
-    }
-    return reverseString;
+    return str.split('').reverse().join('');
+    // let reverseString = '';
+    // for (let char of str) {
+    //     reverseString = char + reverseString;
+    // }
+    // return reverseString;
 }
 
 ///////////////////////////////////
@@ -49,19 +45,19 @@ function fizzBuzz() {
 
 //////////////////////////////////
 
-let messyArray = [[3, 6, 5, 8,[1,[12]]],9];
+let messyArray = [[1, 9, 3],[8, 5, 10],[15]];
 
-function flatten(items){
+function flatten(items) {
     const newArray = [];
     items.forEach(item => {
-        if(Array.isArray(item)){
+        if (Array.isArray(item)) {
             newArray.push(...flatten(item));
-        }else{
+        } else {
             newArray.push(item)
         }
     });
     return newArray;
 }
 
-const answer = flatten(messyArray);
+const answer = reverse('hello');
 console.log(answer);
